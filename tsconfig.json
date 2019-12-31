@@ -1,0 +1,34 @@
+{
+	"include": ["src"],
+	"exclude": ["node_modules"],
+
+	"compilerOptions": {
+		// target node 8+ and browsers
+		// see https://node.green/
+		// the only missing feature is Array.prototype.values
+		"target": "es2017",
+		"lib": ["es2017", "dom"],
+
+		// rollup and plugins deal with modules
+		"module": "es2015",
+		"isolatedModules": true,
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"allowSyntheticDefaultImports": true,
+
+		// typechecking
+		"strict": true,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+
+		// reporting
+		"diagnostics": true,
+		"noEmitOnError": true,
+		"noErrorTruncation": true,
+
+		// code generation
+		"declaration": true,
+		"declarationDir": "types",
+		"newLine": "lf"
+	}
+}
